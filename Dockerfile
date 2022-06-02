@@ -144,6 +144,9 @@ EXPOSE 18080
 # Expose restricted RPC port
 EXPOSE 18089
 
+# Expose i2p incoming port
+EXPOSE 8081
+
 # Add HEALTHCHECK against get_info endpoint
 HEALTHCHECK --interval=30s --timeout=5s CMD curl --fail http://localhost:18089/get_info || exit 1
 
